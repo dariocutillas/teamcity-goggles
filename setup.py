@@ -12,7 +12,7 @@ setup(
     license = "MIT",
     keywords = "example documentation tutorial",
     url = "http://packages.python.org/an_example_pypi_project",
-    packages=['tc_goggles', 'tc_goggles.cli'],
+    packages=['tc_goggles', 'tc_goggles.examples'],
     long_description=read('README.md'),
     long_description_content_type='text/markdown',
     requires=['requests'],
