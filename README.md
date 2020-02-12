@@ -1,13 +1,13 @@
 # TeamCity Goggles
 
-A utility module to perform some queries on TeamCity REST API. Currently
+A utility package to perform some queries on TeamCity REST API. Currently
 the set of supported REST operations if very limited to the needs I've
 had.
 
 Install with:
 
 ```
-pip install https://github.com/dariocutillas/teamcity-goggles
+pip install git+https://github.com/dariocutillas/teamcity-goggles
 ```
 
 Or clone & install with:
@@ -26,6 +26,7 @@ python -m tc_googles.examples.<module_name> <arguments>
 For example:
 
 ```
+# Configure TEAMCITY_SERVER and TEAMCITY_ACCESS_TOKEN environment variables and run
 python -m tc_goggles.examples.find_parameter MY_PARAMETER --values A B C
 ```
 
