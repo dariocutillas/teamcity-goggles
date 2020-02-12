@@ -25,7 +25,7 @@ def find_params(parameter_filter):
                 for parameter in build_type.parameters() if parameter_filter(parameter))
 
     for (param, build_type) in params:
-        msg = f"Match! {build_type.web_url} ({param.name} = {param.value})"
+        msg = f'{build_type.web_url}  {param.name}  {param.value}'
         print(msg)
         
 
