@@ -5,7 +5,7 @@ def read(fname):
     return open(os.path.join(os.path.dirname(__file__), fname), encoding='utf-8').read()
 
 setup(
-    name = "tc-goggles",
+    name = "teamcity-goggles",
     version = "0.0",
     author = "Darío Cutillas",
     description = ("Utility python API for executing TeamCity queries."),
@@ -15,7 +15,7 @@ setup(
     packages=['tc_goggles', 'tc_goggles.examples'],
     long_description=read('README.md'),
     long_description_content_type='text/markdown',
-    requires=['requests'],
+    install_requires=['requests>=2.0'],
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Topic :: Utilities",
