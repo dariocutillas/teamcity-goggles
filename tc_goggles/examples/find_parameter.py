@@ -41,17 +41,14 @@ def main():
 
     args = parser.parse_args()
 
-    # Build the parameter filter based on the arguments
-
     # A convenient list of parameter filters is available on the parameter_filter module.
     # Operators |, & and ~ are overloaded. Alteratively it is possible to define a custom function.
-    parameter_filter = ~inherited \
-                      & name_matches(args.name)
+    parameter_filter = ~inherited & name_matches(args.name)
 
     if args.values:
         regex = f"({'|'.join(args.values)})" 
         parameter_filter = parameter_filter & value_matches(regex)
-     
+
     for result in find_params(parameter_filter, args.limit):
         msg = f'{result.build_type.web_url}{args.delimiter}{result.parameter.name}{args.delimiter}{result.parameter.value}'
         print(msg)
